@@ -7,13 +7,16 @@
 <body>
   <h2>Simulasi ATM</h2>
   <script>
+  // Inisial pilihan transaksi awal sebesar Rp.1.000.000
     let saldo = 1000000; // saldo awal Rp 1.000.000
     alert("Saldo Awal: Rp " + saldo);
-
+// Menampilkan pilihan transaksi kepada pengguna 
     let pilihan = prompt("Pilih transaksi:\n1. Tarik Tunai\n2. Setor Tunai");
-
+// Jika pengguna memilih Tarik tunai
     if (pilihan == "1") {
       let tarik = parseInt(prompt("Masukkan jumlah tarik:"));
+      
+      // Mengecek apakah saldo cukup untuk di tarik
       if (tarik > saldo) {
         alert("Error: Saldo tidak cukup!");
       } else {
